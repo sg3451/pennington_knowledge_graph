@@ -58,6 +58,16 @@ ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 CLAUDE_MODEL = "claude-sonnet-4-20250514"
 
 # ---------------------------------------------------------------------------
+# Query execution safety
+# ---------------------------------------------------------------------------
+# Hard server-side timeout (seconds) applied to every Cypher query run through
+# 05_query.py and 05_streamlit.py. Prevents an expensive/unbounded query -
+# most commonly a free-text "Ask a Question" request that Claude translates
+# into an unbounded variable-length path pattern - from hanging the app
+# indefinitely. Neo4j aborts the query server-side once this elapses.
+QUERY_TIMEOUT_SECONDS = 20
+
+# ---------------------------------------------------------------------------
 # Ingest settings
 # ---------------------------------------------------------------------------
 # Maximum papers to retrieve per run (set to None for full corpus)
