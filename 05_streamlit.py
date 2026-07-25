@@ -147,10 +147,19 @@ def get_driver():
 
 @st.cache_data(ttl=300)
 def run_query(cypher: str, params: dict = None) -> list[dict]:
+    """Run a Cypher query and return results as a list of dicts.
+
+    Uses an explicit transaction with `timeout=` so the database itself
+    terminates a runaway query after QUERY_TIMEOUT_SECONDS. Note:
+    session.run(cypher, params, timeout=X) does NOT do this - the neo4j
+    driver treats an unrecognized kwarg to Session.run() as an extra query
+    parameter, not transaction config, so it would silently do nothing.
+    """
     driver = get_driver()
     with driver.session() as session:
-        result = session.run(cypher, params or {}, timeout=QUERY_TIMEOUT_SECONDS)
-        return [dict(r) for r in result]
+        with session.begin_transaction(timeout=QUERY_TIMEOUT_SECONDS) as tx:
+            result = tx.run(cypher, params or {})
+            return [dict(r) for r in result]
 
 
 # ---------------------------------------------------------------------------
