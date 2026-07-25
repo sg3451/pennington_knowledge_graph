@@ -1,0 +1,14 @@
+claude_knowledge_gap_project/
+├── config.py                    # complete ✓
+├── 01_ingest.py                 # complete ✓
+├── 01b_filter.py                # complete ✓
+├── 02_parse_grobid.py           # complete ✓
+├── 02a_pmc_lookup.py            # complete ✓
+├── 02b_pmc_download.py          # complete ✓
+├── 03_extract_ner.py            # complete ✓
+├── 04_load_neo4j.py             # next
+├── 05_query.py
+└── data/
+    ├── raw/                     # 9,038 filtered records
+    ├── parsed/                  # 403 full texts
+    └── entities/                # 8,944 entity files

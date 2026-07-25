@@ -1,0 +1,12 @@
+============================================================
+NER EXTRACTION REPORT
+============================================================
+Total records          : 9,038
+Successfully extracted : 9,028
+Skipped (already done) : 0
+PubTator hits          : 6,228
+SciSpaCy only          : 2,480
+No text available      : 1
+Errors                 : 9
+
+Entity files in : C:\Users\sg456\Dropbox\MyLearning\AI_ML\AI_projects\claude_knowledge_gap_project\data\entities

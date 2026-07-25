@@ -1,0 +1,14 @@
+claude_knowledge_gap_project/
+├── config.py               # credentials and paths (never commit this)
+├── .env                    # API keys (git-ignored)
+├── .gitignore
+├── data/
+│   ├── raw/                # OpenAlex JSONL files live here
+│   ├── parsed/             # GROBID output will go here
+│   └── entities/           # NER extraction output will go here
+├── 01_ingest.py            # complete ✓
+├── 01b_filter.py           # complete ✓
+├── 02_parse_grobid.py      # next
+├── 03_extract_ner.py
+├── 04_load_neo4j.py
+└── 05_query.py

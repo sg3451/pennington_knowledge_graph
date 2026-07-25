@@ -1,0 +1,14 @@
+To create an API key using your NCBI account:
+
+1.
+
+    Click on your Username to access the Account Settings page
+2.
+
+    Go to the “API Key Management” section and click the button “Create an API key”
+3.
+
+    An API Key will be generated for you.
+4.
+
+    Click the “Replace” button to generate a new API key. Note that the previously issued API key will be inactivated.

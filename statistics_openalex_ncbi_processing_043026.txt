@@ -1,0 +1,17 @@
+Statistics from PBRC publications in OpenAlex
+
+----------------------------------------------------------------------------------------------
+Source				Papers				Notes
+OA PDF URLS (OpenAlex)		5075				Direct download in 02_parse_grobid.py
+PMC versions			6362				Download via 02b_pmc_download.py
+Neither				2406				Manual acquisition only
+Total corpus			9070
+----------------------------------------------------------------------------------------------
+Note that there will be overlap between OA URLs and PMC versions as many papers have both ids. The scripts are designed to handle this. The 02b_pmc_download.py skips papers that already have an OA PDF URL to avoid redundant downloading.
+
+--------------------------------------------------------------------------------------------------
+Source				Estimated Papers
+OA PDF URLS (OpenAlex)		~3000-3500 successfully downloaded
+PMC freely downloadable		~5535 (based on estimate from 100 PMCids)
+Overlap (have both)		some, handled in code
+Realistic full text total	~6500-7500

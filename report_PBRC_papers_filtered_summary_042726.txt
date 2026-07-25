@@ -1,0 +1,23 @@
+Summary of PBRC papers that were filtered out due to mistakes at OpenAlex. It is a small percentage (~5%) which is to be expected. Of the total 9504 papers originally retrieved against PBRC ROR ID: 
+8494 are confirmed as bonafide 
+565 are low confidence - Pennington affiliation verified by name/ROR but no biomedical keyword signal detected. These are likely legitimate papers that just use technical language outside our keyword list (methods papers, statistical papers, instrument validation studies etc.). Worth keeping for now.
+445 - excluded, probably being non-scholarly outputs such as journal front matter, errata, editorial notices. 
+
+
+PENNINGTON_ROR_ID = "https://ror.org/040cnym54"
+PENNINGTON_OPENALEX_ID = "I103990859" 
+SUMMARY from OPENALEX = "https://openalex.org/works?filter=authorships.institutions.lineage:i103990859&include_xpac=true"
+
+
+============================================================
+FILTER REPORT SUMMARY
+============================================================
+Total input records  : 9,504
+Records kept         : 9,059
+Records rejected     : 445
+Retention rate       : 95.32%
+
+Status breakdown:
+  confirmed                           8,494
+  low_confidence                      565
+  unacceptable_work_type              445
